@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.khoubyari</groupId>
@@ -17,6 +17,7 @@
 
 	<properties>
 		<start-class>com.khoubyari.example.Application</start-class>
+		<jcuda.jcudaVersion>12.0.0</jcuda.jcudaVersion>
 	</properties>
 
 	<dependencies>
@@ -105,6 +106,47 @@
 			<groupId>javax.xml.bind</groupId>
 			<artifactId>jaxb-api</artifactId>
 			<version>2.3.0</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.jcuda</groupId>
+			<artifactId>jcuda</artifactId>
+			<version>${jcuda.jcudaVersion}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.jcuda</groupId>
+			<artifactId>jcublas</artifactId>
+			<version>${jcuda.jcudaVersion}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.jcuda</groupId>
+			<artifactId>jcufft</artifactId>
+			<version>${jcuda.jcudaVersion}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.jcuda</groupId>
+			<artifactId>jcurand</artifactId>
+			<version>${jcuda.jcudaVersion}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.jcuda</groupId>
+			<artifactId>jcusparse</artifactId>
+			<version>${jcuda.jcudaVersion}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.jcuda</groupId>
+			<artifactId>jcusolver</artifactId>
+			<version>${jcuda.jcudaVersion}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.jcuda</groupId>
+			<artifactId>jcudnn</artifactId>
+			<version>${jcuda.jcudaVersion}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.jcuda</groupId>
+			<artifactId>jcuda-vec</artifactId>
+			<version>0.0.2</version>
 		</dependency>
 	</dependencies>
 
