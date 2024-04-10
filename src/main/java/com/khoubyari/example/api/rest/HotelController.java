@@ -146,6 +146,7 @@ public class HotelController extends AbstractRestHandler {
     public float[] vectorAdd(@RequestBody VectorAddRequest request) {
         float[] hostX = request.getHostX();
         float[] hostY = request.getHostY();
+        float[] hostZ = request.getHostY();
         long startTime, endTime;
         JCudaDriver.setExceptionsEnabled(true);
         JCudaDriver.cuInit(0);
@@ -192,7 +193,7 @@ public class HotelController extends AbstractRestHandler {
 
         startTime = System.nanoTime();
         for (int i = 0; i < n; i++) {
-            hostY[i] = hostX[i] + hostY[i];
+            hostZ[i] = hostX[i] + hostY[i];
         }
         endTime = System.nanoTime();
         System.out.println("Java Execution time: " + (endTime - startTime) + " ns");
