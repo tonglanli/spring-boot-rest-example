@@ -171,7 +171,7 @@ public class HotelController extends AbstractRestHandler {
         JCudaDriver.cuMemAlloc(deviceY, n * Sizeof.FLOAT);
 
         JCudaDriver.cuMemcpyHtoD(deviceX, Pointer.to(hostX), n * Sizeof.FLOAT);
-        JCudaDriver.cuMemcpyHtoD(deviceY, Pointer.to(deviceY), n * Sizeof.FLOAT);
+        JCudaDriver.cuMemcpyHtoD(deviceY, Pointer.to(hostY), n * Sizeof.FLOAT);
 
         Pointer kernelParameters = Pointer.to(
                 Pointer.to(new int[]{n}),
