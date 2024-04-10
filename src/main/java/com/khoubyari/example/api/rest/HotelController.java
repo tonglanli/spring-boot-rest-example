@@ -146,7 +146,7 @@ public class HotelController extends AbstractRestHandler {
     public float[] vectorAdd(@RequestBody VectorAddRequest request) {
         float[] hostX = request.getHostX();
         float[] hostY = request.getHostY();
-        float[] hostZ = request.getHostY();
+        float[] hostZ = new float[hostX.length];
         long startTime, endTime;
         JCudaDriver.setExceptionsEnabled(true);
         JCudaDriver.cuInit(0);
